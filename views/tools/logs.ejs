@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="badphp/img/title.ico"/>
+    <title>Log Reader</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="assets_logview/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets_logview/css/custom.css">
+<body>
+<div class="">
+    <form action="/logs" method="GET">
+        <p>Diagnostics Ticket ID</p>
+        <p class="text-danger">Enter only ticket ID</p>
+        <div class="input-group">
+         
+            <input class="form-control form-control-sm" name="ticket" aria-describedby="ticket" placeholder="Ticket ID" value="" type="number" id="ticket" required autofocus/>
+        </div>
+        <hr />
+        <p></p>
+        <button type="submit"class="btn btn-success btn-sm btn-block" id="submit_logs">Gib me logs</button>
+    </form>
+    <hr />
+    <div id="accordion">
+    <%if (attachment){%>
+    	<a class="text-danger" href="<%=attachment%>">Download diags here</a>
+    	<hr />
+    <% }%>
+<%
+    if (files){
+%>
+    
+<%        for (const file of files){ %>
+            <div class="card">
+                <div class="card-header" id="heading<%=file.name%>">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" href = "bottom_<%=file.name%>" data-toggle="collapse" data-target="#collapse<%=file.name%>" aria-expanded="true" aria-controls="collapse<%=file.name%>">
+                        <strong><%= file.name %></strong>
+                    </button>
+                </h5>
+                </div>
+
+                <div id="collapse<%=file.name%>" class="collapse" aria-labelledby="heading<%=file.name%>" data-parent="#accordion">
+
+                    <div class="card-body"><pre><%-file.contents%></pre>
+                    </div>
+
+                    <div id = "bottom_<%=file.name%>" class = "card-footer">
+                    <button class="btn btn-link" href = "bottom_<%=file.name%>" data-toggle="collapse" data-target="#collapse<%=file.name%>" aria-expanded="true" aria-controls="collapse<%=file.name%>">
+                        <strong>> CLOSE</strong>
+                    </button>
+                    </div>
+                </div>
+            </div>
+<%
+    }}
+%>
+
+</div>
+
+<a href="#" class="scrollToTop">
+    <button class="btn btn-info btn-md" style="width:100px;">
+    <i class="fa fa-lg fa-arrow-up"></i>
+    </button>
+</a>
+<!-- Bootstrap core JavaScript -->
+<script src="assets_logview/js/jquery.min.js"></script>
+<script src="assets_logview/js/bootstrap.min.js"></script>
+<script src="assets_logview/js/popper.min.js"></script>
+</body>
+<script>
+    $(document).ready(function() {
+
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+        });
+
+        $('.collapse').on('show.bs.collapse', function(e) {
+          var $card = $(this).closest('.card');
+          var $open = $($(this).data('parent')).find('.collapse.show');
+
+          var additionalOffset = 0;
+          if($card.prevAll().filter($open.closest('.card')).length !== 0)
+          {
+                additionalOffset =  $open.height();
+          }
+          $('html,body').animate({
+            scrollTop: $card.offset().top - additionalOffset
+          }, 500);
+        });
+
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-139850820-1', 'auto');
+        ga('set', 'checkProtocolTask', function() {});
+        ga('require', 'displayfeatures');
+
+        $('#submit_logs').click(()=>{
+          ga('send', 'event', {
+            'eventCategory': 'SuperCS',
+            'eventAction': 'Log Reader',
+            'eventLabel': 'Get Logs',
+            'eventValue': 1
+          });
+        })
+
+});
+</script>
+</html>

@@ -1,0 +1,103 @@
+﻿body {
+    background-color:#eee !important;
+}
+section {
+    
+}
+
+a:hover{
+    text-decoration:none !important;
+}
+.center{
+  text-align: center;
+}
+.item:hover{
+    -webkit-box-shadow: 0px 10px 12px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 12px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 12px -6px rgba(0,0,0,0.75);
+}
+.nav-item{
+  font-size: 15px;
+}
+.title{
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.desc{
+  text-align: center;
+  margin: 20px;
+}
+.item
+{
+    white-space: normal;
+    min-height:180px;
+    max-height:180px;
+    margin:5px;
+    max-width:180px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow:hidden;
+    padding:15px !important;
+}
+
+.item:active
+{
+  opacity:0.5;
+}
+
+body.dark-mode {
+  background-color: rgb(68, 68, 68) !important;
+  color: #eee !important;
+}
+
+body.dark-mode a {
+  color: rgb(29, 29, 29);
+}
+
+body.dark-mode button {
+  /*filter: invert(85%);*/
+  background-color: #111; 
+}
+
+body.light-mode {
+  background-color: #eee;
+  color: #111;
+}
+body.light-mode a {
+  color: #111;
+}
+ 
+.scrollToTop{
+	position:fixed;
+  right:40px;
+  bottom:90px;
+	display:none;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+.scrollToTopp{
+	text-align:center; 
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+  right:40px;
+  bottom:50px;
+}
+
+.scrollToToppp{
+	text-align:center; 
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+  right:40px;
+  bottom:10px;
+}
+
+.container-nav{
+  margin: auto;
+}

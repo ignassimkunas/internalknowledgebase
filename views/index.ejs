@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="img/title.ico"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Super support cheat sheet | Homepage</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+   <!-- Custom styles for this template -->
+   <link href="css/custom.css" rel="stylesheet">
+
+   <!-- font awesome -->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body class="my-login-page">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+
+    <div class="container-xl container-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+                <% for (const cat of cats){ 
+                	if (cat.id == 1 && !user) {}
+					        else{ %>
+                	<li class="nav-item">
+                	<a class="nav-link js-scroll-trigger" href="#<%= cat['id']%>"><%=cat['title']%></a>
+                	</li>
+            	  <%}}%>
+            	<% if (user){
+            		for (const cat of customCats){%>
+        			<li class="nav-item">
+      					<a class="nav-link js-scroll-trigger" href="#<%= cat['id']%>"><%=cat['title']%></a>
+      				</li>
+            	<%}} %>	
+            </ul>
+        </div>
+    </div>
+</nav>
+<%if(user){ %>
+  <section id = "nano-rep">
+    <div class = "container">
+    <div class = "row">
+        <div class = "col-lg-12">
+                <div id="nanorep-embedded-widget"></div>
+                <script>!function(t,e,o,c,n,a){var s=this.nanorep=this.nanorep||{};s=s[e]=s[e]||{},s.apiHost=a,s.host=n,s.path=c,s.account=t,s.protocol="https:"===location.protocol?"https:":"http:",s.on=s.on||function(){s._calls=s._calls||[],s._calls.push([].slice.call(arguments))};var p=s.protocol+"//"+n+c+o+"?account="+t,l=document.createElement("script");l.async=l.defer=!0,l.setAttribute("src",p),document.getElementsByTagName("head")[0].appendChild(l)}("nordvpn","embeddedWidget","embedded-widget.js","/web/","nordvpn.nanorep.co");</script>
+
+                <script>
+                nanorep.embeddedWidget.on({
+                    init: function() {
+                        this.setKB('1107624272');
+                        this.setConfigId('1107625202');
+                    }
+                });
+                </script>
+        </div>
+    </div>
+    </div>
+  </section>
+<%}%>	
+
+	<% for (const cat of cats){ 
+		if (cat.id == 1 && !user) {}
+		else{ %>
+			<section id="<%=cat['id'] %>">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-lg-12 mx-auto">
+			                <h2 class="title"><%= cat.title %></h2>
+			                <p class="desc"> <%= cat.description%></p>
+			                <hr/>
+			                <div class="row">
+				                <% for (const item of cat.items){ 
+				                	const img = output.generateIcon(item.icon)%>
+				                	<%-output.buildItemDisplay(img, item.title, item.url, item.id, item.cat_id, cat.style, item.action, item.date)%>
+				                <%}%>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    </div>
+			</section>
+		<%}}%>
+
+<% if (user) {%>	
+	<% for (const cat of customCats){ %>
+    <section id="<%=cat['id'] %>">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+          	 <h2><%= cat.title %></h2>
+             <p class="lead"> <%= cat.description%></p>
+              <hr/>
+                <div class="row">
+                	<% if (cat.items) {%>
+	                <% for (const item of cat.items){ 
+	                	const img = output.generateIcon(item.icon)%>
+	                	<%-output.buildItemDisplay(img, item.title, item.url, item.id, item.cat_id, cat.style, item.action, item.date)%>
+	                <%}}%>
+                </div>
+	            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<% }}%>
+<a href="#" class="scrollToTop">
+<button class = "btn btn-info btn-md">
+  <i class = "fa fa-lg fa-arrow-up"></i>
+</button>
+</a>
+
+<div class = "scrollToTopp">
+
+<% if(!user){%>
+<a href = "/admin" title = "Login to admin panel">
+  <button type="button" class = "btn btn-info"><i class = "fa fa-lg fa-book"></i></button>
+</a>
+<%} else {%>
+	<a href = "/signout" title = "Sign out">
+  	  <button type="button" class = "btn btn-info"><i class = "fa fa-lg fa-sign-out"></i></button>
+	</a>
+	<a href = "/ucp" target = "" title = "Admin panel">
+	  <button type="button" class = "btn btn-info"><i class = "fa fa-lg fa-gear"></i></button>
+	</a>
+<%} %>
+</div>
+
+<div class = "scrollToToppp">
+<button type="button" class = "btn btn-info" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">
+  <i class="fa fa-lg fa-moon-o" aria-hidden="true"></i>
+</button>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom JavaScript for this theme -->
+<script src="js/scrolling-nav.js"></script>
+
+<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.7.1/dist/clipboard.min.js"></script>
+
+<script src = "js/magic.js"></script>
+
+
+
+<script>
+  (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-139850820-1', 'auto');
+  ga('set', 'checkProtocolTask', function() {});
+  ga('require', 'displayfeatures');
+
+  function toggleDarkLight() {
+    var $body = $("body");
+    $body.toggleClass("dark-mode light-mode");
+    sessionStorage.setItem("style", "dark-mode");
+  }
+    
+  //server request
+  $('.supercs-item').click(()=>{
+    ga('send', 'event', {
+      'eventCategory': 'SuperCS',
+      'eventAction': 'Item Click',
+      'eventLabel': 'item',
+      'eventValue': 1
+    });
+
+  })
+
+  $(document).ready(function() {
+    
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+        $('.scrollToTop').fadeIn();
+      } else {
+        $('.scrollToTop').fadeOut();
+      }
+    });
+    
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+      $('html, body').animate({scrollTop : 0},100);
+      return false;
+    });
+    
+    if(sessionStorage.style == "dark-mode")
+    {
+      var $body = $("body");
+      $body.addClass("dark-mode");
+    }
+
+    var clipboard = new Clipboard('.copy');
+
+      $('.item_link').click(function(event) {
+
+        /**
+        * Left mouse button clicked, prevent from opening if it has @copy class
+        * Send statistics request.
+        */
+        switch (event.which) {
+            case 1:
+                if($(this).hasClass("copy"))
+                {
+                  event.preventDefault();
+                }
+
+                url = $(this).attr("href");
+            break;
+        }
+      });
+  });
+</script>
+</body>
+</html>

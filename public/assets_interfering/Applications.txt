@@ -1,0 +1,46 @@
+360 Total Security
+Advanced IP Scanner
+Akruto Sync
+Asus Smart Gestures
+Axence nVision
+Check Point Endpoint Security
+Citrix
+RivaTuner
+Comodo
+Covenant Eyes
+Cybercop
+Dell Support Center
+FileZilla Server
+Fortinet FortiClient
+Free Download Manager
+G-Data
+Glasswire
+IObit Malware Fighter
+Kerio
+McAfee
+MSI Afterburner
+Mysterium
+NETGEAR Genie
+Netnanny
+Network/IP Scanner Shared Resources
+Nmap
+Norton
+Npcap
+Peerguardian
+Pulse Secure
+Pulse Secure Setup Client Activex Control
+Resilio Sync
+Safe Eyes
+SmartByte
+Spy Sweeper
+System Explorer
+System Mechanic
+Tautulli
+Trend Micro
+Untangle Firewall
+WinPcap
+Wireshark
+ZoneAlarm
+Avast
+Acronis
+Acronis True Image

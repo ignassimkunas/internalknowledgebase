@@ -1,0 +1,217 @@
+<!-- Add category Admin section -->
+
+<section id="add_category">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h2>Add & Edit Category</h2>
+                <p>You can load existing category and edit it or create new one.</p>
+                <hr />
+                <form id = "" action="/ucp#add_category" method = "GET">
+                    <div class="form-group">
+                        <select name = "cat_id" class="form-control" id="sel1">
+                            <option value = "">---</option>
+                            <% for (const cat of cats) {%>
+                                <option value='<%=cat.id %>'> <%=cat.title%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Load category</button>
+                </form>
+                <hr />
+                <form id = "" action="/create_cat" method = "POST">
+                    <input type="" name="id" value="<%=catData.id%>" style="visibility: hidden;">
+                    <div class="form-group">
+                        <label for="category_title">Category Title</label>
+                        <input type="text" class="form-control" name = "category_title" value = "<%= catData.title %>" id="category_title" pattern=".{3,}"   required title="3 characters minimum"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="category_desc">Category Description</label>
+                        <input type="text" class="form-control" name = "category_desc" id="category_desc" value = "<%= catData.description %>" pattern=".{3,}"   required title="3 characters minimum"/>
+                    </div>
+                    <div class="form-group">
+                    <label for="sel1">Item styles</label>
+                    <select name = "category_item_style" class="form-control" id="sel1">
+
+                        <% for (const style of styles) { 
+                            if (style == catData.style) {%>
+                            <option class  = "alert alert-<%=style%>" value = "<%=style%>" selected><%=style%></option>
+                            <%}else{%>
+                            <option class  = "alert alert-<%=style%>" value = "<%=style%>"><%=style%></option>
+                        <%}}%>
+                    </select>
+                    </div>
+
+                    <button type="submit" name = "submit" class="btn btn-success btn-block" id = "submit_cat">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="delete_cat">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h2>Delete Category</h2>
+                <p>Deleting categories will delete all items attached to the selected category.</p>
+                <hr />
+                <form id = "" action="/delete_cat" method = "POST">
+                    <div class="form-group">
+                    <label for="sel1">Select Category</label>
+                        <select name = "id" class="form-control" id="sel1">
+                        <option value = "">---</option>
+                        <% for (const cat of cats) {%>
+                            <option value='<%=cat.id %>'> <%=cat.title%></option>
+                        <%}%>
+                        </select>
+                    </div>
+                    <button type="submit" name = "submit" class="btn btn-danger btn-block" id="delete_cat">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="add_item">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h2>Add & Edit Item</h2>
+                <hr />
+                <form id = "" action="/ucp#add_item" method = "GET">
+                    <div class="form-group">
+                        <select name = "item_id" class="form-control" id="sel1">
+                            <option value = "">---</option>
+                             <% for (const item of items) {%>
+                                <option value='<%=item.id %>'> <%=item.title%></option>
+                            <%}%>                  
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Load item</button>
+                </form>
+
+                <form id = "checkChangedbutton" class = "checkChangedbutton" style="margin-top: 20px;"action="/create_item" method = "POST">
+                    <div class ="row">
+                        <div class = "col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="id" value="<%= itemData.id %>" style="visibility: hidden;">
+                                <label for="item_title">Item Title</label>
+                                <input type="text" class="form-control" value = "<%= itemData.title%>" name = "item_title" id="item_title" pattern=".{3,}"   required title="3 characters minimum"/>
+                            </div>
+                        </div>
+                        <div class = "col-md-6">
+                            <div class="form-group">
+                                <label for="item_url">Item Url</label>
+                                <input type="text" class="form-control" value = "<%= itemData.url%>" name = "item_url" id="item_url" pattern=".{3,}"   required title="3 characters minimum"/>
+                            </div>
+                        </div>
+                        <div class = "col-md-4">
+                            <div class="form-group">
+                                <label for="sel1">Item Icon</label>
+                                <select name = "item_icon" class="form-control" id="item_icon">
+                                  <% for (const icon of icons) {
+                                    if (itemData.icon === icon.value){%>
+                                    <option value='<%=icon.value%>' selected> <%=itemData.icon%></option>
+                                    <%}else{%>
+                                    <option value='<%=icon.value%>'> <%=icon.title%></option>
+                                <%}}%>   
+                                </select>
+                            </div> 
+                        </div>
+                        <div class = "col-md-4">
+                            <div class = "form-group">
+                                <label for ="sel2">Action</label>
+                                <select name = "item_action" class = "form-control" id = "sel2" required/>
+                                <% for (const action of actions) {%>
+                                    <option value='<%=action %>'> <%=action%></option>
+                                <%}%> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class = "col-md-4">
+                            <div class="form-group">
+                                <label for="sel3">Category</label>
+                                <select name = "item_cat" class="form-control" id="sel3" required/>
+                                <% for (const cat of cats) 
+                                   if (cat.id === itemData.cat_id){%>
+                                    <option value='<%=cat.id %>' selected> <%=cat.title%></option>
+                                    <%}else{%>
+                                    <option value='<%=cat.id %>'> <%=cat.title%></option>
+                                <%}%>
+                                </select>
+                            </div> 
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block" id="submit_item">Submit</button>
+                </form> 
+                <hr />
+                <h4>Preview</h4>
+                <div class = "item_preview">
+                    <div class = "col-md-2" id = "item_preview_md">
+                        <button class = "btn btn-dark item" id = "item_btn_preview" style ="width:180px !important; height:180px !important; overflow-wrap: break-word;"></button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</section>
+<section id="delete_item">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h2>Delete Item</h2>
+                <hr />
+                <form id = "" action="/delete_item" method = "POST">
+                    <div class="form-group">
+                        <label for="sel1">Select Item</label>
+                        <select name = "id" class="form-control" id="sel1">
+                            <option value = "">---</option>
+                            <% for (const item of items) {%>
+                                <option value='<%=item.id %>'> <%=item.title%></option>
+                            <%}%>   
+                        </select>
+                    </div>
+                    <button type="submit" name = "submit" class="btn btn-danger btn-block"id = "delete_item">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="add_icon">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h2>Add & Edit Icons</h2>
+                <hr /> 
+                <form id = "" action="/ucp#add_icon" method = "GET">
+                    <div class="form-group">
+                        <label for="sel1">Select Icon</label>
+                        <select name = "icon_id" class="form-control" id="sel1">
+                            <option value = "">---</option>
+                            <% for (const icon of icons) {%>
+                                <option value='<%=icon.id %>'> <%=icon.title%></option>
+                            <%}%>   
+                        </select>
+                    </div>
+                    <button type="submit" name = "submit" class="btn btn-info btn-block">Load icon</button>
+                </form>
+                <div class = "text-center"><h1><i class = 'fa fa-lf fa-<%-iconData.value%>'></i></h1></div>
+                <form id = "" action="/create_icon" method = "POST">
+                    <input type="" name="id" value="<%=iconData.id%>" style="visibility: hidden;">
+                    <div class="form-group">
+                        <label for="icon_title">Icon Title</label>
+                        <input type="text" class="form-control" value = "<%= iconData.title%>" name = "icon_title" id="icon_title" pattern=".{3,}"   required title="3 characters minimum"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="icon_value">Icon Value</label>
+                        <input type="text" class="form-control" value = "<%= iconData.value%>" name = "icon_value" id="icon_value" pattern=".{3,}"   required title="3 characters minimum"/>
+                        <p class = "text-danger">* Icon value should be selected from <a href = "http://fontawesome.io/icons/" target = "_blank">here</a></p>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block" id = "submit_icon">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Delete item Admin section -->

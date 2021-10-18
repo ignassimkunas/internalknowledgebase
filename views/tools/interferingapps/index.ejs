@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="assets_interfering/FindCSS.css">
+  <title>Interfering apps checker</title>
+</head>
+<body onmouseover="highlight()">
+
+  <div id="demo-container">
+  	<label for="file-input" id="file-input-label">Choose an application text file</label>
+  	<input type="file" id="file-input" accept="text/plain" />
+  </br>
+  	<div id="file-progress-container"><span id="file-progress-percent"></span>% read</div>
+  </br>
+    <textarea id="input" rows="5" cols="70" placeholder="Or paste the application list here"></textarea>
+  </br>
+
+ <button onclick="f()" type="button" id="submitbutton">Find interfering applications</button>
+  	<div id="contents"></div>
+
+    </div>
+
+<script type="text/javascript" src="assets_interfering/FindJS.js"></script>
+
+</body>
+</html>

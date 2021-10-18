@@ -1,0 +1,379 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Redacted> Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table -AutoSize
+
+DisplayName                                                    DisplayVersion Publisher                   InstallDate
+-----------                                                    -------------- ---------                   -----------
+Active GIF Creator 4.3                                         4.3            Image Tools Group
+Battle.net                                                                    Blizzard Entertainment
+CCleaner Browser                                               77.1.1834.93   Piriform Software           20191010
+
+DZSALauncher version 0.0.4.3                                   0.0.4.3        Maca134                     20191006
+Glyph                                                                         Trion Worlds, Inc.          20191001
+ArcheAge: Unchained                                                           Trion Worlds, Inc.
+Google Chrome                                                  78.0.3904.70   Google LLC                  20191023
+League of Legends                                              1.0            Riot Games, Inc             1565104556
+NordVPN                                                        6.24.14        NordVPN
+OpenAL
+Overwolf                                                       0.136.0.10     Overwolf Ltd.
+Paltalk
+Albion Online                                                                 Sandbox Interactive GmbH
+Shotcut                                                        19.07.15       Meltytech, LLC
+Steam                                                          2.10.91.91     Valve Corporation
+Voicemeeter, The Virtual Mixing Console                                       VB-Audio Software
+
+World of Warcraft Classic                                                     Blizzard Entertainment
+Snap Camera 1.5.0                                              1.5.0          Snap Inc.                   20190924
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501   12.0.30501.0   Microsoft Corporation
+
+Microsoft Visual C++ 2017 Redistributable (x86) - 14.16.27024  14.16.27024.1  Microsoft Corporation
+Lightshot-5.5.0.4                                              5.5.0.4        Skillbrains                 20190802
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030   11.0.61030.0   Microsoft Corporation
+UE4 Prerequisites (x64)                                        1.0.13.0       Epic Games, Inc.
+Microsoft Visual C++ 2017 X86 Minimum Runtime - 14.16.27024    14.16.27024    Microsoft Corporation       20190924
+Microsoft Visual C++ 2017 Redistributable (x64) - 14.16.27024  14.16.27024.1  Microsoft Corporation
+Google Update Helper                                           1.3.35.301     Google LLC                  20191008
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660   12.0.40660.0   Microsoft Corporation
+Gyazo 4.0.1.0                                                                 Nota Inc.                   20190804
+Microsoft Visual C++ 2017 X86 Additional Runtime - 14.16.27024 14.16.27024    Microsoft Corporation       20190924
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660  12.0.40660     Microsoft Corporation       20190910
+Microsoft Visual C++ 2005 Redistributable                      8.0.59193      Microsoft Corporation       20190909
+NordVPN network TAP                                            1.0.1          NordVPN                     20191008
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161 9.0.30729.6161 Microsoft Corporation       20190811
+CCleaner Update Helper                                         1.5.21.0       Piriform Software           20191006
+NordVPN                                                        6.24.14        NordVPN                     20191008
+Battlestate Games Launcher 0.9.1.847                           0.9.1.847      Battlestate Games           20190930
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030  11.0.61030     Microsoft Corporation       20190831
+Second Galaxy version 1.1.0                                    1.1.0          Zilong Game                 20190910
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030     11.0.61030     Microsoft Corporation       20190831
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030   11.0.61030.0   Microsoft Corporation
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660     12.0.40660     Microsoft Corporation       20190910
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219    10.0.40219     Microsoft Corporation       20190809
+
+Realtek High Definition Audio Driver                           6.0.1.8382     Realtek Semiconductor Corp.
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501   12.0.30501.0   Microsoft Corporation
+OldSchool RuneScape Launcher 1.2.7                             1.2.7          Jagex Ltd                   20190901
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.21022      9.0.21022      Microsoft Corporation       20190925
+
+A Plague Tale Innocence                                                                                                
+Adobe AIR                                                          28.0.0.127      Adobe Systems Incorporated          
+Adobe Shockwave Player 12.3                                        12.3.4.204      Adobe Systems, Inc.                 
+Adobe SVG Viewer 3.0                                                3.0                                                
+MSI Afterburner 4.6.2 Beta 2                                       4.6.2 Beta 2    MSI Co., LTD                        
+AnyTrans                                                           6.3.6.0         iMobie Inc.                         
+Audacity 2.0.6                                                     2.0.6           Audacity Team                       
+Avast Antivirus Gratuit                                            19.8.2393       AVAST Software                      
+AVerMedia C353 HD Capture Device 3.3.64.57                         3.3.64.57       AVerMedia TECHNOLOGIES, Inc.        
+Bandisoft MPEG-1 Decoder                                                           Bandisoft.com                       
+Battle.net                                                                         Blizzard Entertainment              
+Battlelog Web Plugins                                              2.3.0           EA Digital Illusions CE AB          
+BS.Player FREE                                                     2.74.1085       AB Team, d.o.o.                     
+Adobe Download Assistant                                           1.2.9           Adobe Systems Incorporated          
+                                                                                                                       
+                                                                   1.41            Creative Technology Limited         
+Crossout Launcher 1.0.3.65                                                                                             
+CrystalDiskInfo 8.3.0                                              8.3.0           Crystal Dew World                   
+DiskCheckup v3.4                                                   3.4.1003        PassMark Software                   
+EaseUS Partition Master 13.5                                                       EaseUS                              
+EaseUS Todo Backup 12.0 Trial                                      12.0            CHENGDU YIWO Tech Development Co....
+Easy Thumbnails (Remove only)                                      3.0             Fookes Software                     
+ESN Sonar                                                          0.70.4          ESN Social Software AB              
+F1 2015                                                                            R.G. Mechanics, ProZorg_tm          
+FileHippo App Manager                                                              FileHippo.com                       
+Fraps                                                                                                                  
+Free Download Manager 3.9.7                                                        FreeDownloadManager.ORG             
+Google Chrome                                                      77.0.3865.120   Google LLC                          
+Grand Theft Auto V                                                                                                     
+HD Tune Pro 5.50                                                                   EFD Software                        
+HD Tune 2.55                                                                       EFD Software                        
+HFSExplorer 0.23.1                                                 0.23.1          Catacombae Software                 
+HOLUX ezTour for Logger v2.8                                       v2.8            iTravel Tech, Inc.                  
+                                                                   2.00            Creative Technology Limited         
+Inno3D version 2.0.0.008                                           2.0.0.008                                           
+VIA Gestionnaire de périphériques de plate-forme                   1.42            VIA Technologies, Inc.              
+Smart Switch                                                       4.2.18124.4     Samsung Electronics Co., Ltd.       
+Microsoft Flight Simulator X                                       10.0.61355.0    Microsoft Game Studios              
+TP-Link PLC Utility                                                2.2.2758.8      TP-Link                             
+KC Softwares DUMo                                                  2.18.1.96       KC Softwares                        
+KC Softwares KCleaner                                              3.6.4.103       KC Softwares                        
+K-Lite Mega Codec Pack 15.0.0                                      15.0.0          KLCP                                
+Malwarebytes Anti-Malware version 2.2.1.1043                       2.2.1.1043      Malwarebytes                        
+myFairTunes v.7.0.2c                                                               Team-Assembly                       
+NirSoft Wireless Network Watcher                                                                                       
+NordVPN                                                            6.24.14         NordVPN                             
+Notepad++ (32-bit x86)                                             7.7.1           Notepad++ Team                      
+NTFS Link 2.1                                                                                                          
+OpenAL                                                                                                                 
+Origin                                                             10.5.50.31938   Electronic Arts, Inc.               
+Overwatch                                                                          Blizzard Entertainment              
+Parrot Software Update Tool                                                                                            
+Picasa 3                                                           3.9.141.259     Google, Inc.                        
+PotPlayer-64 bit                                                   1.7.8557        Kakao Corp.                         
+Project CARS v.6.0                                                                                                     
+PunkBuster Services                                                0.994           Even Balance, Inc.                  
+Assassins Creed Unity                                              1                                                   
+Rockstar Games Social Club                                         1.1.5.8         Rockstar Games                      
+RivaTuner Statistics Server 7.2.3 Beta 2                           7.2.3 Beta 2    Unwinder                            
+                                                                   1.00            Creative Technology Limited         
+SeaTools for Windows 1.4.0.7                                       1.4.0.7         Seagate Technology                  
+                                                                                                                                                                                                                                              
+Microsoft Flight Simulator X Service Pack 1                        10.0.61355.0    Microsoft Game Studios              
+                                                                   1.00            Creative Technology Limited         
+Steam                                                              2.10.91.91      Valve Corporation                   
+AWC V4.11                                                                          Steve Murphy                        
+SugarSync                                                          3.11.1.7        SugarSync, Inc.                     
+Supercopier 4.0.1.13                                               4.0.1.13        Supercopier                         
+TeamViewer 14                                                      14.7.1965       TeamViewer                          
+TechPowerUp GPU-Z                                                                  TechPowerUp                         
+The Jackbox Party Pack                                                                                                 
+Toolkit 㘠ꬩऀ耀̰ ̬                                                    1.6.1.3         Seagate 㘧ꬴࠀ蠀卐Ç                     
+BUFFALO TurboPC EX Series                                                                                              
+Uplay                                                              20.0            Ubisoft                             
+Assassin's Creed IV Black Flag                                                     Ubisoft                             
+Steep                                                                              Ubisoft                             
+Tom Clancy's Rainbow Six Siege                                                     Ubisoft Montreal                    
+Assassin's Creed Unity                                                             Ubisoft                             
+USB Safely Remove 6.1                                                              SafelyRemove.com                    
+VideoClient Plugin 2,6,10,46                                       2,6,10,46                                           
+VirusTotal Uploader 2.2                                                                                                
+Watch Dogs 2                                                                                                           
+WebCamera                                                          1.0.0.1                                             
+WebClient                                                                                                              
+Western Digital SSD Dashboard                                      2.5.1.0         Western Digital Corporation or it...
+                                                                                                                       
+WinAutomation                                                      5.0.4.3995      Softomotive Ltd                     
+WinX MediaTrans                                                    4.8             Digiarty Software, Inc.             
+X-Plane 11                                                                                                             
+MSI Smart Utilities                                                2.0.0.11        MSI                                 
+Web Components                                                                                                         
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501       12.0.30501.0    Microsoft Corporation               
+inSSIDer 4                                                         4.2.0.12        MetaGeek, LLC                       
+Wondershare TunesGo ( Version 9.6.0 )                              9.6.0           Wondershare                         
+MSI Fast Boot                                                      1.0.1.15        MSI                                 
+Adobe AIR                                                          28.0.0.127      Adobe Systems Incorporated          
+Futuremark SystemInfo                                              5.23.745.0      Futuremark                          
+Radmin Viewer 3.5                                                  3.50.0000       Famatech                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+MSI ECO Center                                                     1.0.0.35        MSI                                 
+Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.22.27821        14.22.27821     Microsoft Corporation               
+                                                                   2.00            Creative Technology Limited         
+Platform                                                           1.42            VIA Technologies, Inc.              
+                                                                                                                       
+Geeks3D FurMark 1.17.0.0                                                           Geeks3D                             
+Logiciel pour périphérique à chipset Intel®                        10.1.17765.8094 Intel(R) Corporation                
+Samsung Magician                                                   5.0.0.790       Samsung Electronics                 
+Advanced IP Scanner 2.4                                            2.4.3021        Famatech                            
+Battlefield™ 1                                                     1.0.57.44284    Electronic Arts                     
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030       11.0.61030.0    Microsoft Corporation               
+                                                                                                                       
+Microsoft SQL Server Compact 3.5 SP2 ENU                           3.5.8080.0      Microsoft Corporation               
+Microsoft Visual C++ 2019 X86 Additional Runtime - 14.22.27821     14.22.27821     Microsoft Corporation               
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.60610      11.0.60610      Microsoft Corporation               
+Win32DiskImager version 1.0.0                                      1.0.0           ImageWriter Developers              
+Microsoft ASP.NET MVC 4 Runtime                                    4.0.40804.0     Microsoft Corporation               
+Epic Games Launcher                                                1.1.144.0       Epic Games, Inc.                    
+VFW_Codec32                                                        0.1.160.0       GoPro, Inc.                         
+Paragon HFS+ for Windows                                           9.2.0.42        Paragon Software                    
+Corsair LINK 4                                                     4.9.9.3         Corsair Components, Inc.            
+                                                                                                                       
+MSI Live Update 6                                                  6.2.0.58        MSI                                 
+Theme Hospital                                                     3.0.0.5         Electronic Arts                     
+Data Lifeguard Diagnostic version 1.36                                             Western Digital Corporation         
+Anthem™                                                            1.0.58.44883    Electronic Arts                     
+Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.22.27821 14.22.27821.0   Microsoft Corporation               
+Google Update Helper                                               1.3.35.301      Google LLC                          
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660       12.0.40660.0    Microsoft Corporation               
+swMSM                                                              12.0.0.1        Adobe Systems, Inc                  
+HP Support Assistant                                               8.8.24.33       Hewlett-Packard Company             
+                                                                                                                       
+HP Google Drive Plugin                                             36.0.41.58587   HP                                  
+                                                                                                                       
+                                                                                                                       
+PCMark 10                                                          2.0.2144.0      UL                                  
+                                                                                                                       
+Intel Driver && Support Assistant                                  19.10.42.4      Intel                               
+Microsoft Visual C++ 2005 Redistributable                          8.0.61001       Microsoft Corporation               
+MSXML 4.0 SP2 Parser and SDK                                       4.20.9818.0     Microsoft Corporation               
+PatchCleaner                                                       1.4.20          HomeDev                             
+Microsoft Visual C++ 2005 Redistributable                          8.0.56336       Microsoft Corporation               
+Visual Similarity Duplicate Image Finder Professional 6.0.0.1      6.0.0.1         MindGems, Inc.                      
+Smart Switch                                                       4.2.18124.4     Samsung Electronics Co., Ltd.       
+Battlefield 3™                                                     1.6.0.0         Electronic Arts                     
+MSI USB Speed Up                                                   1.0.0.10        MSI                                 
+MSI Super Charger                                                  1.3.0.28        MSI                                 
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660      12.0.40660      Microsoft Corporation               
+XSplit Gamecaster                                                  3.4.1812.0304   SplitmediaLabs                      
+Microsoft Visual C++ 2017 Redistributable (x64) - 14.14.26429      14.14.26429.4   Microsoft Corporation               
+                                                                   1.00            Creative Technology Limited         
+                                                                   6.4.1.11        NZXT                                
+MSI Command Center                                                 1.0.1.24        MSI                                 
+Intel(R) Extreme Tuning Utility                                    6.5.1.355       Intel Corporation                   
+GoPro for Desktop                                                  1.4.0.2733      GoPro, Inc.                         
+                                                                   1.41            Creative Technology Limited         
+STAR WARS™ Battlefront™ II                                         1.1.7.55254     Electronic Arts                     
+Intel® Security Assist                                             1.0.1.618       Intel Corporation                   
+3DMark                                                             2.10.6799.0     UL                                  
+HP Update                                                          5.005.002.002   Hewlett-Packard                     
+Assistant de téléchargement                                        6.65.13         Druide informatique inc.            
+HPDiagnosticCoreDll                                                1.0.15.0        Hewlett Packard                     
+VC80CRTRedist - 8.0.50727.6195                                     1.2.0           DivX, Inc                           
+Microsoft Flight Simulator X                                       10.0.61355.0    Microsoft Game Studios              
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.60610       11.0.60610.1    Microsoft Corporation               
+NordVPN network TAP                                                1.0.1           NordVPN                             
+GoPro Studio                                                       5.9.2733        GoPro, Inc.                         
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.17       9.0.30729       Microsoft Corporation               
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161     9.0.30729.6161  Microsoft Corporation               
+Google Earth Pro                                                   7.3.2.5776      Google                              
+Intel(R) Extreme Tuning Utility                                    6.5.1.355       Intel Corporation                   
+                                                                   1.00            Creative Technology Limited         
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.60610       11.0.60610.1    Microsoft Corporation               
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030       11.0.61030.0    Корпорация Майкрософт               
+Apple Software Update                                              2.6.3.1         Apple Inc.                          
+Microsoft Visual C++ 2005 Redistributable                          8.0.50727.42    Microsoft Corporation               
+TP-Link PLC Utility                                                2.2.2758.8      TP-Link                             
+Advanced Port Scanner 2.4                                          2.4.2750        Famatech                            
+NordVPN                                                            6.24.14         NordVPN                             
+Corsair LINK 4                                                     4.9.9.3         Corsair Components, Inc.            
+Battlefield 4™                                                     1.8.2.48475     Electronic Arts                     
+Adobe Refresh Manager                                              1.8.0           Adobe Systems Incorporated          
+                                                                                                                       
+Adobe Acrobat XI Pro                                               11.0.23         Adobe Systems                       
+Adobe Acrobat Reader DC - Français                                 19.021.20049    Adobe Systems Incorporated          
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030      11.0.61030      Microsoft Corporation               
+Surveillance Viewer                                                0.12.10.0       Surveillance Viewer                 
+Sound Blaster Cinema 2                                             1.00.07         Creative Technology Limited         
+                                                                                                                       
+Intel(R) Update Manager                                            3.1.1228        Intel Corporation                   
+mccPILOTLOG                                                        1.4.12          MCC bvba                            
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030         11.0.61030      Microsoft Corporation               
+Shadow Of The Tomb Raider MULTI 11                                                 SQUARENIX                           
+                                                                                                                       
+Antidote 9                                                         9.04.3427       Druide informatique inc.            
+                                                                                                                       
+Launcher Prerequisites (x64)                                       1.0.0.0         Epic Games, Inc.                    
+                                                                                                                       
+HP Customer Experience Enhancements                                6.0.3.1         Hewlett-Packard                     
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030       11.0.61030.0    Microsoft Corporation               
+Battlefield™ Hardline                                              1.4.0.10        Electronic Arts                     
+                                                                                                                       
+Acronis True Image WD Edition                                      19.0.33         Acronis                             
+DocuNet Viewer                                                     2.0             Vistair                             
+Intel Processor Diagnostic Tool 64bit                              4.1.4.36                                            
+Intel® Driver & Support Assistant                                  19.10.42.4      Intel                               
+Visuel intégré                                                     1.0.0003        Druide informatique inc.            
+Apex Legends                                                       1.0.2.3         Electronic Arts, Inc.               
+MSI Smart Tool                                                     1.0.0.38        MSI                                 
+MSI Gaming APP                                                     6.2.0.84        MSI                                 
+Battlefield™ V                                                     1.0.62.326      Electronic Arts                     
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660         12.0.40660      Microsoft Corporation               
+M88-3325 Gaming Mouse                                              1.0.4                                               
+HP Support Solutions Framework                                     12.13.42.1      Hewlett-Packard Company             
+Seagate Recovery Suite                                             3.2.6.0         Seagate                             
+Asmedia USB Host Controller Driver                                 1.16.36.1       Asmedia Technology                  
+AnyTrans 4.4.0                                                     4.4.0           iMobie Inc.                         
+Adobe Download Assistant                                           1.2.9           Adobe Systems Incorporated          
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.60610         11.0.60610      Microsoft Corporation               
+webplugin.exe version 3.1.0.4                                      3.1.0.4                                             
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40660       12.0.40660.0    Microsoft Corporation               
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030       11.0.61030.0    Корпорация Майкрософт               
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219        10.0.40219      Microsoft Corporation               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ABBYY FineReader 12 Corporate                                      12.1.609        ABBYY Production LLC                
+Realtek High Definition Audio Driver                               6.0.1.8186      Realtek Semiconductor Corp.         
+CAM                                                                3.7.7           NZXT                                
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501       12.0.30501.0    Microsoft Corporation               
+Windscribe                                                         1.83 Build 20   Windscribe Limited                  
+VideoGenie                                                         1.0.0.12        MSI                                 
+Apple Application Support (32 bits)                                8.0             Apple Inc.                          
+                                                                                                                       
+                                                                                                                       
+Tenorshare ReiBoot 7.2.1.5                                         7.2.1.5         Tenorshare, Inc.                    
+
+
+Intel(R) HID Event Filter                                      1.1.1.318          Intel Corporation                    
+Anki                                                           2.1.15                                                  
+ArcGIS 10.2 for Desktop                                        10.2.3348          Environmental Systems Research Ins...
+ArcGIS 10.2 for Desktop - 中文(简体)语言包                            10.2.3348          Environmental Systems Research Ins...
+ArcGIS 10.2 License Manager                                    10.2.3348          Environmental Systems Research Ins...
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+GlobalMapper 19 (64-bit)                                       19.00.0000         Blue Marble Geographics              
+Google Chrome                                                  78.0.3904.70       Google LLC                           
+                                                                                                                       
+NordVPN                                                        6.24.14            NordVPN                              
+NVIDIA Stereoscopic 3D Driver                                  7.17.13.9640       NVIDIA Corporation                   
+Password Safe (64-bit)                                         3.48.0             Rony Shapiro                         
+Skype版本8.42                                                    8.42               Skype Technologies S.A.              
+Steam                                                          2.10.91.91         Valve Corporation                    
+暴风影音5                                                          5.76.0613.1111     北京暴风科技股份有限公司                         
+Surfer 13                                                      13.5.583           Golden Software                      
+TeamViewer 14                                                  14.6.2452          TeamViewer                           
+微信                                                             2.6.2.27           腾讯科技(深圳)有限公司                         
+                                                                                                                       
+XMind 8 Update 4 (v3.7.4)                                      3.7.4.201709040350 XMind Ltd.                           
+英特尔(R) 无线 Bluetooth(R)                                         21.20.0.4          Intel Corporation                    
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501   12.0.30501.0       Microsoft Corporation                
+腾讯QQ                                                           8.9.5.22062        腾讯科技(深圳)有限公司                         
+Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005     12.0.21005         Microsoft Corporation                
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4148 9.0.30729.4148     Microsoft Corporation                
+Camtasia Studio 8                                              8.0.2.918          TechSmith Corporation                
+Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030   11.0.61030.0       Microsoft Corporation                
+McAfee WebAdvisor                                              4.1.0.102          McAfee, LLC.                         
+Dell Digital Delivery Services                                 4.0.41.0           Dell Inc.                            
+ArcGIS 10.2 for Desktop                                        10.2.3348          Environmental Systems Research Ins...
+Java Auto Updater                                              10.0.2.0           Oracle Corporation                   
+太乐地图ArcGIS插件                                                   2.1                太乐地图                                 
+Realtek Card Reader                                            10.0.14393.31228   Realtek Semiconductor Corp.          
+Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40649   12.0.40649.5       Microsoft Corporation                
+Dell Update                                                    3.0.1              Dell Inc.                            
+Google Update Helper                                           1.3.35.301         Google LLC                           
+ArcGIS 10.2 License Manager                                    10.2.3348          Environmental Systems Research Ins...
+                                                                                                                       
+Autodesk Content Service                                       3.1.3.0            Autodesk                             
+Autodesk Content Service Language Pack                         3.1.3.0            Autodesk                             
+SketchUp Import for AutoCAD 2014                               1.1.0              Autodesk                             
+Intel(R) Dynamic Platform and Thermal Framework                8.3.10207.5567     Intel Corporation                    
+                                                                                                                       
+FARO LS 1.1.501.0 (64bit)                                      5.1.0.30630        FARO Scanner Production              
+NordVPN network TAP                                            1.0.1              NordVPN                              
+Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161 9.0.30729.6161     Microsoft Corporation                
+ManicTime                                                      4.2.8.0            Finkit d.o.o.                        
+Advanced PDF Password Recovery                                 5.06.113.2041      Elcomsoft Co. Ltd.                   
+NordVPN                                                        6.24.14            NordVPN                              
+Python Launcher                                                3.6.6386.0         Python Software Foundation           
+Adobe Refresh Manager                                          1.8.0              Adobe Systems Incorporated           
+Adobe Acrobat DC                                               15.007.20033       Adobe Systems Incorporated           
+                                                                                                                       
+Intel(R) Online Connect Software Asset Manager                 3.4.2072           Intel Corporation                    
+Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030  11.0.61030         Microsoft Corporation                
+ArcGIS 10.2 for Desktop - 中文(简体)语言包                            10.2.3348          Environmental Systems Research Ins...
+英特尔® 芯片组设备软件                                                   10.1.1.38          Intel(R) Corporation                 
+Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030     11.0.61030         Microsoft Corporation                
+TrueColorXMLTables                                             7.10.0.0           Entertainment Experience             
+Autodesk App Manager                                           1.1.0              Autodesk                             
+True Color                                                     7.9.0.0            Entertainment Experience             
+Intel(R) Trusted Connect Services Client                       1.52.230.1         Intel Corporation                    
+Intel(R) Trusted Connect Service Client x86                    1.52.230.1         Intel Corporation                    
+Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030   11.0.61030.0       Microsoft Corporation                
+                                                                                                                       
+Microsoft Visual C++ 2017 Redistributable (x64) - 14.12.25810  14.12.25810.0      Microsoft Corporation                
+Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219    10.0.40219         Microsoft Corporation                
+                                                                                                                                                                                                                                                                                                                                                                   
+Intel(R) Processor Graphics                                    26.20.100.6859     Intel Corporation                    
+ABBYY FineReader 12 Corporate                                  12.1.439           ABBYY Production LLC                 
+Realtek High Definition Audio Driver                           6.0.1.8142         Realtek Semiconductor Corp.          
+Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501   12.0.30501.0       Microsoft Corporation                
+Autodesk Featured Apps                                         1.1.0              Autodesk                             
+Realtek Ethernet Controller All-In-One Windows Driver          10.12.1007.2016    Realtek                              
+Microsoft VC++ redistributables repacked.                      12.0.0.0           Intel Corporation                    
+Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005  12.0.21005         Microsoft Corporation                
+百度网盘                                                           5.7.1              百度在线网络技术（北京）有限公司                     
+硕鼠 0.4.8.1 正式版                                                 0.4.8.1 正式版        flvcd.com                            
+Avast Antivirus Gratuit                                            19.8.2393       AVAST 
+
+PS C:\Users\Redacted>

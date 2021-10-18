@@ -1,0 +1,7 @@
+body{padding-top:50px; padding:50px;}
+.scrollToTop{position:fixed;right:40px;bottom:140px;display:none;}
+.scrollToTop_3{position:fixed; right:40px; bottom:90px;}
+.scrollToTop:hover{text-decoration:none;}
+.scrollToTop_2{text-align:center; font-weight: bold;color: #444;text-decoration: none;position:fixed;right:40px;bottom:50px;}
+.scrollToTop_1{text-align:center; font-weight: bold;color: #444;text-decoration: none;position:fixed;right:40px;bottom:10px;}
+
