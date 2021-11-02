@@ -1,11 +1,16 @@
-function fun2(req, res) {
+function fun2(req, res) { //Review: The name for this function is hard to understand 
+    //and does not show what exact use-case does this function perform. 
+    //Changing the name to something meaningful would help to improve 
+    //the readability and maintainability of the code.
+    //Additionally, the passed arguments to the function are unclear and should be renamed to something meaningful.
 
     //If a ticket is provided, get the diagnostics from that ticket.
     const archive = './logs/archive/'
     const files = './logs/files/'
     var fileContents = []
     var type, attachmentCount = 0, attachmentArray = []
-    var attachment_url = ''
+    var attachment_url = '' //Review: According to JavaScript naming convention, all names should be writen in camelCase.
+    //For example in this case - attachmentUrl.
     const comments = await logsApp.getComments(ticket)
 
     //Iterate through comments
@@ -37,18 +42,23 @@ function fun2(req, res) {
                 	
                     await logsApp.downloadFile(url, filePath, ticket)
                     await logsApp.unzipFile(filePath, files + ticket + '(' + attachmentCount + ')')
+                    //Review: Long lines in the code such as above should be divided into a couple of lines for ease of reading.
+                    // The line should be broken after an operator or a comma.
                 }
             }
-
+            
+            // Review: If statements should be commented for 
+            // better understanding of why is this statement needed and what function it performs.
             else if (ext === '.txt' && attachment.file_name != 'DiagnosticsLog.txt') {
 
                 type = 'android'
                 attachment_url = url
-
-                var filePath
+                
+                
                 if (comment.attachments.length > 1) {
                     filePath = files + ticket + '/' + attachment.file_name + '(' + attachmentCount + ')'
-                }
+                } //Review: Long lines in the code such as above should be divided into a couple of lines for ease of reading.
+                // The line should be broken after an operator or a comma.
                 else {
                     filePath = files + ticket + '/' + attachment.file_name
                 }
