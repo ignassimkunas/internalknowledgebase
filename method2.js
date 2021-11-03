@@ -1,16 +1,11 @@
-function fun2(req, res) { //Review: The name for this function is hard to understand 
-    //and does not show what exact use-case does this function perform. 
-    //Changing the name to something meaningful would help to improve 
-    //the readability and maintainability of the code.
-    //Additionally, the passed arguments to the function are unclear and should be renamed to something meaningful.
+function logExtractor() {
 
     //If a ticket is provided, get the diagnostics from that ticket.
     const archive = './logs/archive/'
     const files = './logs/files/'
     var fileContents = []
     var type, attachmentCount = 0, attachmentArray = []
-    var attachment_url = '' //Review: According to JavaScript naming convention, all names should be writen in camelCase.
-    //For example in this case - attachmentUrl.
+    var attachmentUrl = ''
     const comments = await logsApp.getComments(ticket)
 
     //Iterate through comments
@@ -24,13 +19,15 @@ function fun2(req, res) { //Review: The name for this function is hard to unders
             const ext = url.slice(-4)
 
             //Download all files from comment, store into logs/archive, extract into logs/files
+            //If to check if log file is from Windows device
             if (ext === '.zip') {
 
                 type = 'windows'
-                attachment_url = url
+                attachmentUrl = url
 
                 //Example path: archive/6988399/6988399(0).zip
-                const filePath = archive + ticket + '/' + ticket + '(' + attachmentCount + ')' + '.zip'
+                const filePath = archive + ticket + '/' + ticket + 
+                      '(' + attachmentCount + ')' + '.zip'
 
                 attachmentArray.push(files + ticket + '(' + attachmentCount + ')')
 
@@ -41,24 +38,22 @@ function fun2(req, res) { //Review: The name for this function is hard to unders
                 if (!fs.existsSync(filePath)) {
                 	
                     await logsApp.downloadFile(url, filePath, ticket)
-                    await logsApp.unzipFile(filePath, files + ticket + '(' + attachmentCount + ')')
-                    //Review: Long lines in the code such as above should be divided into a couple of lines for ease of reading.
-                    // The line should be broken after an operator or a comma.
+                    await logsApp.unzipFile(filePath, files + ticket +
+                                            '(' + attachmentCount + ')')
                 }
             }
             
-            // Review: If statements should be commented for 
-            // better understanding of why is this statement needed and what function it performs.
+            //If to check if log file is from Android device
             else if (ext === '.txt' && attachment.file_name != 'DiagnosticsLog.txt') {
 
                 type = 'android'
-                attachment_url = url
+                attachmentUrl = url
                 
                 
                 if (comment.attachments.length > 1) {
-                    filePath = files + ticket + '/' + attachment.file_name + '(' + attachmentCount + ')'
-                } //Review: Long lines in the code such as above should be divided into a couple of lines for ease of reading.
-                // The line should be broken after an operator or a comma.
+                    filePath = files + ticket + '/' + attachment.file_name + 
+                        '(' + attachmentCount + ')'
+                }
                 else {
                     filePath = files + ticket + '/' + attachment.file_name
                 }
@@ -70,10 +65,11 @@ function fun2(req, res) { //Review: The name for this function is hard to unders
                     await logsApp.downloadFile(url, filePath, ticket)
                 }
             }
+            //If to check if log file is from macOS device
             else if (ext === '.log') {
 
                 type = 'mac'
-                attachment_url = url
+                attachmentUrl = url
             	
                 const filePath = files + ticket + '/' + attachment.file_name
 
